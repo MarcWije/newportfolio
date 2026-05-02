@@ -66,7 +66,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-[0.7] z-[-1]"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-[0.9] z-[-1]"
       >
         <source src="/loading.mp4" type="video/mp4" />
       </video>

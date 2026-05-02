@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-[#030303] text-white selection:bg-cyber-cyan/30 overflow-x-hidden font-sans antialiased">
+      <body className="bg-[#030303] text-[#00f2ff] selection:bg-cyber-cyan/30 overflow-x-hidden font-sans antialiased">
         {/* Background Video Layer */}
         <video
           autoPlay

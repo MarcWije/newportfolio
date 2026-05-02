@@ -41,7 +41,7 @@ export default function Home() {
           <Hero />
 
           <section className="mt-12">
-            <h2 className="flex items-center text-sm font-mono text-gray-500 tracking-[0.2em] mb-12">
+            <h2 className="flex items-center text-sm font-mono text-[#00f2ff] tracking-[0.2em] mb-12">
               <span className="w-8 h-[1px] bg-gray-800 mr-4"></span>
               PROJECTS
               <span className="ml-4 flex-grow h-[1px] bg-gray-800"></span>
