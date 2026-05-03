@@ -17,7 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: my-portfolio
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,14 +30,20 @@ jobs:
           node-version: 20
           cache: npm
 
+      
+
       - name: Install dependencies
         run: npm install
 
       - name: Build static site
         run: npm run build
 
+
       - name: Verify export output
         run: ls -R out
+
+      - name: Add nojekyll
+        run: touch out/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -43,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: my-portfolio/out
 
   deploy:
     needs: build
