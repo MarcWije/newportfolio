@@ -212,7 +212,7 @@ export default function Home() {
                   "Integrated Neo4j graph database to implement a personalized recommendation system."
                 ]}
                 tech="REACT | FIREBASE | NEO4J | TYPESCRIPT | EXPO REACT | FIGMA | AURADB | FIRESTORE | FIREBASE AUTHENTICATION"
-                images={["/APP 1.png", "/APP 2.png"]}
+                images={["/App 1.png", "/App 2.png"]}
               />
               <ProjectCard 
                 title="Mock ATM System" 
