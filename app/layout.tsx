@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           muted
           loop
           playsInline
-          className="fixed inset-0 w-full h-full object-cover pointer-events-none opacity-50 z-[-1]"
+          className="fixed inset-0 w-full h-full object-cover pointer-events-none opacity-45 z-[-1]"
         >
           <source src="/background.mp4" type="video/mp4" />
         </video>

@@ -56,12 +56,25 @@ export default function Home() {
             </h2>
             <div className="text-[#00f2ff]/80 font-light leading-relaxed space-y-4 max-w-4xl">
               <h2>Education</h2>
-              <h3>St. Peter's College - Bambalapitiya (2006 - 2019)</h3>
+              <h4 className="-ml-6">• St. Peter's College - Bambalapitiya (2006 - 2019)</h4>
               <p>= O/L - 7A 2C  | A/L - 2C 1W</p>
-              <h3>The Open University of Sri Lanka (2021 - 2022)</h3>
+              <h4 className="-ml-6">• The Open University of Sri Lanka (2021 - 2022)</h4>
               <p>= Adv. Certificate in Science</p>
-              <h3>The Open University of Sri Lanka (2023 - Present)</h3>
+              <h4 className="-ml-6">• The Open University of Sri Lanka (2023 - Present)</h4>
               <p>= BSc Information Technology</p>
+              <h2>Work Experience</h2>
+              <h4 className="-ml-6">• Data Entry Operator - Commercial Bank Nugegoda (2021 Apr - 2022 Nov)</h4>
+              <p>= Contributed to the branch's operational efficiency by accurately updating data in various databases.</p>
+              <p>= Collaborated with team members to ensure all data entry tasks were completed efficiently and on time</p>
+              <h4 className="-ml-6">• Data Entry Operator - AV Business Solutions Pvt Ltd (2022 Nov - 2023 May)</h4>
+              <p>= Handled all aspects of customer payment updates, ensuring precision and professionalism in every transaction.</p>
+              <p>= Promoted to a role handling company-wide email inquiries from customers, demonstrating a strong ability to manage communication and resolve issues.</p>
+              <h4 className="-ml-6">• Quality Control Specialist - AV Business Solutions Pvt Ltd (2023 May - 2024 July)</h4>
+              <p>= Evaluated and analyzed customer care agent interactions to measure performance and identify training needs.</p>
+              <h4 className="-ml-6">• Quality Control Supervisor - AV Business Solutions Pvt Ltd (2024 July - 2025 Jan)</h4>
+              <p>= Supervised a four-member team on Quality Control tasks while also assisting in the training and development of new customer care agents.</p>
+              <h4 className="-ml-6">• IT Intern - AMW Capital Leasing And Finance PLC (2026 Feb - Present)</h4>
+              <p>= Working as an IT Intern at AMW Capital Leasing And Finance PLC, where I am gaining hands-on experience in IT support, system maintenance, and troubleshooting, while also contributing to various IT projects and initiatives within the company.</p>
             </div>
           </section>
 
@@ -85,8 +98,8 @@ export default function Home() {
                 { title: "Unsupervised Machine Learning, Recommenders, Reinforcement Learning", issuer: "Stanford University | DeepLearning.AI", image: "/CERT 3.png" },
                 { title: "Machine Learning Specialization", issuer: "Stanford University | DeepLearning.AI", image: "/CERT 4.png" },
                 { title: "Oracle Cloud Infrastructure Certified AI Foundations Associate", issuer: "Oracle University", image: "/CERT 5.png" }
-              ].map((cert, i) => (
-                <div key={i} className="group border border-white/5 bg-white/[0.02] backdrop-blur-sm p-4 rounded-sm flex flex-col gap-4 hover:border-cyber-cyan/30 transition-all duration-300">
+              ].map((cert) => (
+                <div key={cert.title} className="group border border-white/5 bg-white/[0.02] backdrop-blur-sm p-4 rounded-sm flex flex-col gap-4 hover:border-cyber-cyan/30 transition-all duration-300">
                   <div className="flex flex-col">
                     <span className="text-[#00f2ff] font-bold">{cert.title}</span>
                     <span className="text-xs font-mono text-cyber-cyan/60 uppercase mt-1">{cert.issuer}</span>
@@ -113,24 +126,32 @@ export default function Home() {
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                 className="bg-clip-text text-transparent bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] [text-shadow:0_0_15px_rgba(0,242,255,0.5)] font-bold"
               >
-                SKILLS
+                TECHNICAL EXPERIENCE & SKILLS
               </motion.span>
               <span className="ml-4 flex-grow h-[1px] bg-gray-800"></span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 md:gap-24">
               {[
-                { category: "Languages", items: "Python  TypeScript Java Prolog" },
-                { category: "Frameworks", items: "React", "Next.js", "React Native", "Tailwind CSS" },
-                { category: "Databases & Tools", items: "Firebase", "Firestore", "Neo4j", "Figma" }
-                
-              ].map((skill, i) => (
-                <div key={i}>
-                  <h3 className="text-cyber-cyan text-sm md:text-base font-mono uppercase tracking-widest mb-6 opacity-70">
+                { category: "Machine Learning", items: "Supervised Learning | Unsupervised Learning | Reinforcement Learning " },
+                { category: "Neural Networks", items: "Deep Learning | Neural Networks | TensorFlow | Numpy" },
+                { category: "Specialized AI", items: "Neuro Symbolic AI | Knowledge-based Systems | Recommender Systems" },
+                { category: "Logic & Search", items: "Symbolic AI | Search Algorithms | Prolog" },
+                { category: "LLMs & GenAI", items: "LLMOps | LangChain | Vertex AI " },
+                { category: "Mobile & Web Development", items: "React Native | React.js | Expo React | NX Framework" },
+                { category: "Programming Languages", items: "Python | Java | C | TypeScript | HTML | CSS" },
+                { category: "Databases & Cloud", items: "Firestore | Neo4j | SQL | NoSQL | Firebase | AuraDB" },
+                { category: "UI/UX & Design Thinking", items: " Figma | User Experience Design | User Interface Design" },
+                { category: "Business & Analysis", items: "Business Analysis | Quality Control | Product Knowledge | Financial Services" },
+                { category: "Customer Excellence", items: "Customer Service | Customer Satisfaction | Call Quality | Phone Etiquette | Problem Solving | Troubleshooting" },
+                { category: "Administrative & Productivity", items: "Microsoft Office | Teamwork | Interpersonal Skills | Communication" }
+              ].map((skill) => (
+                <div key={skill.category}>
+                  <h3 className="text-cyber-cyan text-sm md:text-base font-mono uppercase tracking-widest mb-6 opacity-90">
                     {skill.category}
                   </h3>
-                  <div className="flex flex-wrap gap-4 md:gap-6">
-                    {skill.items.map((item, j) => (
-                      <span className="text-[9px] uppercase tracking-[0.3em] font-mono text-cyber-cyan bg-cyber-cyan/5 border border-cyber-cyan/20 px-3 py-1.5 rounded-none inline-block">
+                  <div className="flex flex-wrap gap-12 md:gap-14">
+                    {skill.items.split(" | ").map((item) => (
+                      <span key={item} className="text-xs md:text-sm uppercase tracking-[0.2em] font-mono text-cyber-cyan bg-cyber-cyan/5 border border-cyber-cyan/20 px-6 py-3 rounded-none inline-block">
                         {item}
                       </span>
                     ))}
@@ -155,13 +176,30 @@ export default function Home() {
             
             <div className="grid md:grid-cols-2 gap-8">
               <ProjectCard 
+                title="Neuro Symbolic AI Math Solver" 
+                points={[
+                  "Designed and implemented a Neuro-Symbolic AI Math Solver using Python, combining a Llama 3.2:1B model for natural language processing and Sympy for symbolic mathematics to solve complex mathematical problems. It uses the speed and efficiency of the 1B parameter model to interpret and process Natural Language, while leveraging Sympy's powerful symbolic computation capabilities to provide accurate solutions."
+                ]}
+                tech="PYTHON | LLMS | SYMPY | LANGCHAIN"
+                images={["/Graph.png", "/Performance.png"]}
+              />
+               <ProjectCard 
+                title="Medical Diagnosis Expert System" 
+                points={[
+                  "Developed a Medical Expert System using PROLOG, simulating a diagnostic system for common medical conditions via a given number of symptoms. Uses a Knowledge Base and Predicates to Infer and provide possible diagnoses based on user input."
+                ]}
+                tech="PROLOG | KNOWLEDGE-BASED SYSTEMS | INFERENCE ENGINES"
+                images={["/MED1.png", "/MED2.png"]}
+              />
+              <ProjectCard 
                 title="GPS Navigation System" 
                 points={[
                   "Developed a navigation system using Prolog language for logical route inference.",
                   "Calculates optimal paths based on distance, real-time traffic, and weather conditions.",
                   "Implemented reward functions to dynamically adjust route suggestions."
                 ]}
-                tech="PROLOG | ALGORITHMS"
+                tech="PROLOG | SEARCH ALGORITHMS | REWARD FUNCTIONS"
+                images={["/MAP.png", "/MAP2.png"]}
               />
               <ProjectCard 
                 title="Apparel Marketplace" 
@@ -170,9 +208,19 @@ export default function Home() {
                   "Architected a cross-platform marketplace using React Native (Expo) and TypeScript, integrating Firebase for streamlined authentication and account management.",
                   "Engineered a dual-role user system using Firestore (NoSQL) to manage permissions and secure data access for both vendors and customers.",
                   "Enhanced security by implementing biometric authentication (FaceID/Fingerprint) utilizing Expo’s native modules.",
-                  "Developed comprehensive vendor management features, including real-time product inventoryupdates and account information updates."
+                  "Developed comprehensive vendor management features, including real-time product inventoryupdates and account information updates.",
+                  "Integrated Neo4j graph database to implement a personalized recommendation system."
                 ]}
-                tech="REACT | FIREBASE | NEO4J"
+                tech="REACT | FIREBASE | NEO4J | TYPESCRIPT | EXPO REACT | FIGMA | AURADB | FIRESTORE | FIREBASE AUTHENTICATION"
+                images={["/APP 1.png", "/APP 2.png"]}
+              />
+              <ProjectCard 
+                title="Mock ATM System" 
+                points={[
+                  "Developed a mock ATM system using Java, simulating core banking functionalities like Authentication, Deposit, Withdrawal, Account balance inquiry etc ."
+                ]}
+                tech="JAVA | OOP "
+                images={["/ATM1.png", "/ATM2.png"]}
               />
             </div>
           </section>
