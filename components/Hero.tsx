@@ -1,21 +1,21 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import { jost } from "@/app/ui/fonts";
 
 export default function Hero() {
   return (
-    <section className="py-12 md:py-20">
-      <div className="grid grid-cols-2 md:grid-cols-2 items-center gap-12 md:gap-16 w-full">
+    <section className={` ${jost.className} p-12 md:p-20`}>
+      <div className="grid grid-cols-2 md:grid-cols-2 items-center gap-12 md:gap-16 w-2xl ">
         <motion.div 
           initial={{ opacity: 0, x: -20 }} 
           animate={{ opacity: 1, x: 0 }}
-          className="w-full flex flex-col items-center md:items-start text-center md:text-left justify-self-center"
+          className="w-full flex flex-col items-center p-6 md:items-start text-center md:text-left justify-self-center"
         >
-          <div className="inline-block px-3 py-1 rounded-full border border-cyber-cyan/30 bg-cyber-cyan/10 text-cyber-cyan text-xs font-mono mb-6">
+          <div className="inline-block px-3 py-1 rounded-full border border-cyber-cyan/30 bg-cyber-cyan/10 text-white text-xs mb-6">
           </div>
-          <h2 className="text-sm md:text-base font-mono mb-0 leading-none text-cyber-cyan">Hello !, I Am</h2>
-          <h1 className="text-2xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold -mt-1 md:-mt-2 mb-4 sm:mb-8 tracking-tight text-[#00f2ff] leading-none text-balance">
+          <h2 className="text-sm md:text-base mb-0 leading-none">Hello !, I Am</h2>
+          <h1 className="text-2xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold -mt-1 md:-mt-2 mb-4 sm:mb-8 tracking-tight text-white leading-none text-balance">
             <motion.span
               animate={{ backgroundPosition: ["0% 0%", "200% 0%"] }}
               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
@@ -24,8 +24,8 @@ export default function Hero() {
               Shehan Uyanwatte
             </motion.span>
           </h1>
-          <h3 className="text-[22px] sm:text-sm font-mono text-cyber-cyan/70 mb-4 uppercase tracking-wider">BSc IT Undergraduate | OUSL</h3>
-          <p className="text-sm sm:text-lg md:text-xl text-[#00f2ff]/80 max-w-2xl leading-relaxed mb-10 font-light tracking-wide text-justify md:text-left">
+          <h3 className="text-[22px] sm:text-sm font-mono text-white mb-4 uppercase tracking-wider">BSc IT Undergraduate | OUSL</h3>
+          <p className="text-sm sm:text-lg md:text-xl p-6 text-white w-xl mb-10 font-light ">
             <b>I'm a Proactive and results-driven student eager to contribute my skills and learn from industry experts. I'm actively seeking opportunities to gain hands-on experience and build professional connections</b>
           </p>
           
@@ -43,7 +43,7 @@ export default function Hero() {
   href="/CV.pdf"
   target="_blank"
   rel="noopener noreferrer"
-  className="text-[#00f2ff] visited:text-[#00f2ff] hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]"
+  className="text-white visited:text-white hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"

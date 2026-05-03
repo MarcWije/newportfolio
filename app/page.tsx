@@ -5,12 +5,13 @@ import Image from "next/image";
 import LoadingScreen from "@/components/LoadingScreen";
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
+import { jost } from "./ui/fonts";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <>
+    <div className="w-full">
       <AnimatePresence mode="wait">
         {!isLoaded && (
           <LoadingScreen key="loader" onComplete={() => setIsLoaded(true)} />
@@ -28,7 +29,7 @@ export default function Home() {
               'none',
               'hue-rotate(90deg) blur(1px)',
               'none',
-              'hue-rotate(-90deg) contrast(120%)',
+              'hue-rotate(-90deg) contrast(12%)',
               'none'
             ]
           }}
@@ -37,44 +38,44 @@ export default function Home() {
             times: [0, 0.1, 0.2, 0.3, 0.4, 1],
             ease: "easeInOut"
           }}
-          className="max-w-7xl mx-auto px-8 sm:px-16 md:px-24 py-20 md:py-32 min-h-screen box-border"
+          className="max-w-2xl w-11/12 text-white mx-auto px-8 sm:px-16 md:px-24 py-20 md:py-32 min-h-screen box-border"
         >
           <Hero />
 
           {/* About Me Section */}
-          <section className="mt-20">
-            <h2 className="flex items-center text-sm font-mono tracking-[0.2em] mb-8">
+          <section className={`max-w-4xl`}>
+            <h2 className="items-center text-lg font-mono tracking-[0.2em] mb-8 text-white">
               <span className="w-8 h-[1px] bg-gray-800 mr-4"></span>
               <motion.span
                 animate={{ backgroundPosition: ["0% 0%", "200% 0%"] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                className="bg-clip-text text-transparent bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] [text-shadow:0_0_15px_rgba(0,242,255,0.5)] font-bold"
+                className="bg-clip-text p-6 text-white text-transparent bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] [text-shadow:0_0_15px_rgba(0,242,255,0.5)] font-bold"
               >
                 ABOUT ME
               </motion.span>
               <span className="ml-4 flex-grow h-[1px] bg-gray-800"></span>
             </h2>
-            <div className="text-[#00f2ff]/80 font-light leading-relaxed space-y-4 max-w-4xl">
+            <div className="text-white text-xl font-light space-y-4 max-w-4xl">
               <h2>Education</h2>
-              <h4 className="-ml-6">• St. Peter's College - Bambalapitiya (2006 - 2019)</h4>
-              <p>= O/L - 7A 2C  | A/L - 2C 1W</p>
-              <h4 className="-ml-6">• The Open University of Sri Lanka (2021 - 2022)</h4>
-              <p>= Adv. Certificate in Science</p>
-              <h4 className="-ml-6">• The Open University of Sri Lanka (2023 - Present)</h4>
-              <p>= BSc Information Technology</p>
+              <h4 className="ml-[1rem]">❖ St. Peter's College - Bambalapitiya (2006 - 2019)</h4>
+              <p className="ml-[3rem]">➢ O/L - 7A 2C  | A/L - 2C 1W</p>
+              <h4 className="ml-[1rem]">❖ The Open University of Sri Lanka (2021 - 2022)</h4>
+              <p className="ml-[3rem]">➢ Adv. Certificate in Science</p>
+              <h4 className="ml-[1rem]">❖ The Open University of Sri Lanka (2023 - Present)</h4>
+              <p className="ml-[3rem]">➢ BSc Information Technology</p>
               <h2>Work Experience</h2>
-              <h4 className="-ml-6">• Data Entry Operator - Commercial Bank Nugegoda (2021 Apr - 2022 Nov)</h4>
-              <p>= Contributed to the branch's operational efficiency by accurately updating data in various databases.</p>
-              <p>= Collaborated with team members to ensure all data entry tasks were completed efficiently and on time</p>
-              <h4 className="-ml-6">• Data Entry Operator - AV Business Solutions Pvt Ltd (2022 Nov - 2023 May)</h4>
-              <p>= Handled all aspects of customer payment updates, ensuring precision and professionalism in every transaction.</p>
-              <p>= Promoted to a role handling company-wide email inquiries from customers, demonstrating a strong ability to manage communication and resolve issues.</p>
-              <h4 className="-ml-6">• Quality Control Specialist - AV Business Solutions Pvt Ltd (2023 May - 2024 July)</h4>
-              <p>= Evaluated and analyzed customer care agent interactions to measure performance and identify training needs.</p>
-              <h4 className="-ml-6">• Quality Control Supervisor - AV Business Solutions Pvt Ltd (2024 July - 2025 Jan)</h4>
-              <p>= Supervised a four-member team on Quality Control tasks while also assisting in the training and development of new customer care agents.</p>
-              <h4 className="-ml-6">• IT Intern - AMW Capital Leasing And Finance PLC (2026 Feb - Present)</h4>
-              <p>= Working as an IT Intern at AMW Capital Leasing And Finance PLC, where I am gaining hands-on experience in IT support, system maintenance, and troubleshooting, while also contributing to various IT projects and initiatives within the company.</p>
+              <h4 className="ml-[1rem]">❖ Data Entry Operator - Commercial Bank Nugegoda (2021 Apr - 2022 Nov)</h4>
+              <p className="ml-[3rem]">➢ Contributed to the branch's operational efficiency by accurately updating data in various databases.</p>
+              <p className="ml-[3rem]">➢ Collaborated with team members to ensure all data entry tasks were completed efficiently and on time</p>
+              <h4 className="ml-[1rem]">❖ Data Entry Operator - AV Business Solutions Pvt Ltd (2022 Nov - 2023 May)</h4>
+              <p className="ml-[3rem]">➢ Handled all aspects of customer payment updates, ensuring precision and professionalism in every transaction.</p>
+              <p className="ml-[3rem]">➢ Promoted to a role handling company-wide email inquiries from customers, demonstrating a strong ability to manage communication and resolve issues.</p>
+              <h4 className="ml-[1rem]">❖ Quality Control Specialist - AV Business Solutions Pvt Ltd (2023 May - 2024 July)</h4>
+              <p className="ml-[3rem]">➢ Evaluated and analyzed customer care agent interactions to measure performance and identify training needs.</p>
+              <h4 className="ml-[1rem]">❖ Quality Control Supervisor - AV Business Solutions Pvt Ltd (2024 July - 2025 Jan)</h4>
+              <p className="ml-[3rem]">➢ Supervised a four-member team on Quality Control tasks while also assisting in the training and development of new customer care agents.</p>
+              <h4 className="ml-[1rem]">❖ IT Intern - AMW Capital Leasing And Finance PLC (2026 Feb - Present)</h4>
+              <p className="ml-[3rem]">➢ Working as an IT Intern at AMW Capital Leasing And Finance PLC, where I am gaining hands-on experience in IT support, system maintenance, and troubleshooting, while also contributing to various IT projects and initiatives within the company.</p>
             </div>
           </section>
 
@@ -226,6 +227,6 @@ export default function Home() {
           </section>
         </motion.main>
       )}
-    </>
+    </div>
   );
 }

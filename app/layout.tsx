@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { jost } from "./ui/fonts";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-});
 
 export const metadata: Metadata = {
   title: "Shehan | Portfolio",
@@ -19,15 +9,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-[#030303] text-[#00f2ff] selection:bg-cyber-cyan/30 font-sans antialiased overflow-x-hidden min-h-screen">
+    <html lang="en" className={`${jost.className}`}>
+      <body className="bg-[#030303] text-white selection:bg-cyber-cyan/30 antialiased overflow-x-hidden min-h-screen">
         {/* Background Video Layer */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="fixed inset-0 w-full h-full object-cover pointer-events-none opacity-45 z-[-1]"
+          className="fixed inset-0 w-full h-full object-cover pointer-events-none opacity-25 z-[-1]"
         >
           <source src="/background.mp4" type="video/mp4" />
         </video>
